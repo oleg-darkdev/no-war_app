@@ -22,7 +22,7 @@ import SocialPanelYellowIcons from '../layout/SocialPanelYellowIcons.svelte';
 // Components
 import ListCard from '../components/ListCard.svelte';
 import FindForm from '../components/FindForm.svelte';
-import QuestionsList from '../components/QuestionsList.svelte';
+import QuestionsList from '../components/faq/QuestionsList.svelte';
 
 // Data
 import unitsList from '../data/unitsList';
@@ -50,7 +50,7 @@ let showUnitsRF = false,
     <title>🇺🇦 #STOPWAR</title>
 </svelte:head>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/rf200/master/static/img/bg/header_bg.png);" />
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
 
 <!-- F2DD31 4F72B6 -->
 <FirstSection >
@@ -71,7 +71,7 @@ let showUnitsRF = false,
     </Card>
 </FirstSection>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/rf200/master/static/img/bg/calculator_bg.png);"/>
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);"/>
 <CalculatorSection >
 	<div style="display: flex; justify-content: center; flex-direction: column; flex-wrap: no-wrap; width: 400px;">
 		<List class="demo-list">
@@ -206,7 +206,7 @@ let showUnitsRF = false,
 <div class="section-body bg-img" style="height: 50vh; background-image: url();" />
 <YellowSection >
 	<!-- {#each Object.values(gamesFAQ) as game} -->
-		<!-- <QuestionsList data={questionsList}/> -->
+		<QuestionsList data={questionsList}/>
 	<!-- {/each}   -->
 </YellowSection>  
 

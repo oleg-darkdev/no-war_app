@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 import List, {
     Group,
     Item,
@@ -20,19 +20,20 @@ export let data = {}
 
 
  <Card style="width: 100%; max-width: 100%; min-width: 300px;background-color: red; margin-bottom: 15px;">
-        <Media style="background-image: url({data.promo.banner}); max-height: 300px; height: 230px; width: 100%; min-width: 300px; "/>
+        <Media style="background-image: url(''); max-height: 300px; height: 230px; width: 100%; min-width: 300px; "/>
             <Content class="mdc-typography--body2">
                 <div style="display: flex; justify-content: center;">
                     <Card style='min-width: 320px; width: auto; border-color: red;  height: 80px; margin-bottom: 15px;'>
-                        <PrimaryAction style="display: flex; align-items: center;" on:click={() => {
+                        <PrimaryAction style="display: flex; align-items: center;" padded>
+                            <!--  on:click={() => {
                             data.showFaq = !data.showFaq;
-                        }} padded>
+                        }} -->
                             <span style="font: 35px 'grafitty'; color: #fff;">text - FAQ</span>
                         </PrimaryAction>
                     </Card>
                  </div>
 
-            {#if data.showFaq}
+            <!-- {#if data.showFaq}
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <Group style="width: 100%;">
                         <PartGameFaqList text="Basic FAQ ⁉️" faqData={data.basicFAQ}/>
@@ -40,10 +41,10 @@ export let data = {}
                         <PartGameFaqList text="Other FAQ ⁉️" faqData={data.otherFaq}/>
                     </Group>
                 </div>
-            {/if}
+            {/if} -->
     </Content>
 </Card>
 
 <style>
 
-</style> -->
+</style>
