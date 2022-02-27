@@ -1,5 +1,4 @@
 <script>
-import gamesData from '../data/gamesData';
 import Card, {
   Content,
   PrimaryAction,
@@ -11,21 +10,10 @@ import socialIcons from '../data/social/socialTq';
 </script>
 
 
-<footer style="background-color: #4F72B6; min-height: 600px;">
+<footer style="background-color: #4F72B6; height: 600px;">
 
 
 <div  style="display: flex; flex-direction: row; flex-wrap: wrap;">
-    <ul >
-      <li>
-        <a style="color: #fff;" href=".">Boardgames</a>
-      </li>
-       {#each gamesData.all as game}
-        <li>
-          <a style="color: #fff;" href={`games/${game.promo.id}`}>{game.promo.shortName}</a>
-        </li>
-      {/each}
-    </ul>
-
     <div  style="display: flex; flex-direction: column;"> 
       <h2 style="font: 26px 'grafitty';">Follow Us</h2>
       <div style="display: flex; flex-direction: row; align-content: center; width: 200px; flex-wrap: wrap;">
