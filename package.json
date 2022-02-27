@@ -1,0 +1,50 @@
+{
+  "name": "rf200-last",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node my-output-directory",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "prepare": "npm run smui-theme-light && npm run smui-theme-dark",
+    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+    "smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
+    "smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
+  },
+  "devDependencies": {
+    "@material/theme": "^13.0.0",
+    "@material/typography": "^13.0.0",
+    "@playwright/test": "^1.19.1",
+    "@smui/button": "^6.0.0-beta.13",
+    "@smui/card": "^6.0.0-beta.11",
+    "@smui/chips": "^6.0.0-beta.11",
+    "@smui/data-table": "^6.0.0-beta.11",
+    "@smui/drawer": "^6.0.0-beta.13",
+    "@smui/fab": "^6.0.0-beta.11",
+    "@smui/icon-button": "^6.0.0-beta.13",
+    "@smui/image-list": "^6.0.0-beta.11",
+    "@smui/list": "^6.0.0-beta.11",
+    "@smui/menu-surface": "^6.0.0-beta.11",
+    "@smui/paper": "^6.0.0-beta.11",
+    "@smui/segmented-button": "^6.0.0-beta.13",
+    "@smui/top-app-bar": "^6.0.0-beta.13",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.5.0",
+    "smui-theme": "^6.0.0-beta.14",
+    "svelte-preprocess": "^4.10.3",
+    "svelte": "^3.46.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fontsource/fira-mono": "^4.5.0",
+    "@lukeed/uuid": "^2.0.0",
+    "cookie": "^0.4.1"
+  }
+}
