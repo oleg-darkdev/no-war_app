@@ -6,14 +6,17 @@
   Title,
   Scrim,
 } from '@smui/drawer';  
+// import Header from '../layout/Header.svelte';
+import Footer from '../layout/Footer.svelte';
 </script>
 
-  <AppContent class="app-content">
-      <main class="main-content">
-          <slot />
-     </main>
-  </AppContent> 
+<AppContent class="app-content">
+    <main class="main-content">
+        <slot />
+    </main>
+</AppContent> 
 
+<Footer />
 <style>
 /* .main-content {
     overflow: auto;

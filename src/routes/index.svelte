@@ -66,12 +66,11 @@ let showUnitsRF = false,
 
 
 			<FindForm color='F2DD31'/>
-			<!-- <SocialPanelYellowIcons title="🇺🇦 #STOPWAR"/> -->
 	  </Content>
     </Card>
 </FirstSection>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);"/>
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
 <CalculatorSection >
 	<div style="display: flex; justify-content: center; flex-direction: column; flex-wrap: no-wrap; width: 400px;">
 		<List class="demo-list">
@@ -89,7 +88,7 @@ let showUnitsRF = false,
 	
 </CalculatorSection>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/rf200/master/static/img/bg/prisoners_bg.png);" />
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);" />
 <InfoSection >
 	<div style="display: flex; align-items: center; flex-direction: column; flex-wrap: no-wrap; width: 100%;">
 		<FindForm color='4F72B6' />
@@ -185,7 +184,7 @@ let showUnitsRF = false,
 </InfoSection>
 
 
-<div class="section-body bg-img" style="height: 50vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/rf200/master/static/img/bg/support_bg.png);" />
+<div class="section-body bg-img" style="height: 50vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/support_bg.png);" />
 <YellowSection >
   <Card style="max-width: 760px; ">
       <Content>
@@ -203,21 +202,21 @@ let showUnitsRF = false,
     </Card>	
 </YellowSection>  
 
-<div class="section-body bg-img" style="height: 50vh; background-image: url();" />
-<YellowSection >
-	<!-- {#each Object.values(gamesFAQ) as game} -->
+<div class="section-body bg-img" style="height: 50vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
+<BlueSection >
 		<QuestionsList data={questionsList}/>
-	<!-- {/each}   -->
+</BlueSection>  
+
+
+<div class="section-body bg-img" style="height: 50vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/contacts_bg.png);" />
+<YellowSection >
+	<SocialPanelYellowIcons title="🇺🇦 #STOPWAR"/>
 </YellowSection>  
 
 
 
 
 
-
-
-
-<div class="section-body bg-img" style="height: 50vh; background-image: url();" />
 <!-- <div class="section-body bg-img" style="height: 50vh; background-image: url();" /> -->
 <!-- <div class="section-body bg-img" style="height: 50vh; background-image: url();" /> -->
 

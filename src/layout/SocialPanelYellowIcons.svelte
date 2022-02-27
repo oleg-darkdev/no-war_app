@@ -6,9 +6,9 @@ import socialData from '../data/social/socialYellow';
 export let title = ''
 </script>
 
-  <Paper style="margin: 0 auto; width: 80%; height: auto; margin-bottom: 25px; border: 2px solid #F2DD31; background-color: #191B1B;" class="paper-demo">
+  <Paper style="margin: 0 auto; width: 90%; height: auto; margin-bottom: 25px; border: 2px solid #F2DD31; background-color: #191B1B;" class="paper-demo">
 	  <!--  👇 -->
-    <Title style="font: 60px 'impact'; text-align: center; color: #fff;">{title + ` 💙💛`}</Title> 
+    <Title style="font: 54px 'impact'; text-align: center; color: #fff;">{title + ` 💙💛`}</Title> 
     <!-- <Subtitle>This is a sheet of paper.</Subtitle> -->
     <Content style="display: flex; flex-direction: row; align-content: center; width: 100%; min-width: 300px; flex-wrap: wrap;">
       {#each Object.values(socialData) as social}
