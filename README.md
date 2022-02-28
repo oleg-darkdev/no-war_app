@@ -1,40 +1,34 @@
-# create-svelte
+# SMUI SvelteKit Example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+An example project implementing [Svelte Material UI](https://github.com/hperrin/svelte-material-ui) with [SvelteKit](https://kit.svelte.dev/).
 
-## Creating a project
+# Get it Running
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Clone the repo.
+2. `npm install`
+3. `npm run dev`
+4. http://localhost:3000
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+# A Note About SvelteKit
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+From the SvelteKit website:
 
-> Note: the `@next` is temporary
+> SvelteKit is in early development, and some things may change before we hit version 1.0. This document is a work-in-progress. If you get stuck, reach out for help in the [Discord chatroom](https://svelte.dev/chat).
 
-## Developing
+As such, this repo might break during SvelteKit's development. If it does, please ping me (@SylphWeed) in [the SMUI support Discord channel](https://discord.gg/aFzmkrmg9P).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# License
 
-```bash
-npm run dev
+Copyright 2021 Hunter Perrin
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-## Building
+    http://www.apache.org/licenses/LICENSE-2.0
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
