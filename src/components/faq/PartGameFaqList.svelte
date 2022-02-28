@@ -36,11 +36,17 @@ export let text;
 {#if showFaqList}
     <List style="max-width: 760px; width: 100%; height: auto;">
         {#each faqData  as faq }
-        <Item style="color: #fff;" on:click={() => faq.showAnswer = !faq.showAnswer}><Text style="color: #fff">{faq.question}</Text></Item>
+        <Item style="color: #fff; display: flex; align-content: center; justify-content: space-between; padding-right: 40px;" on:click={() => faq.showAnswer = !faq.showAnswer}>
+            <Text style="color: #fff">{faq.question}</Text>
+            <Fab mini>
+                <Icon class="material-icons">{faq.showAnswer ? 'expand_less':'expand_more'}</Icon>
+            </Fab>
+        </Item>
         {#if faq.showAnswer}
-        <div transition:fade="{{delay: 250, duration: 300}}" class='answer'>
-            <p class=" mdc-typography--body" >		{faq.answer}
-            </p></div>
+            <div transition:fade="{{delay: 250, duration: 300}}" class='answer'>
+                <p class=" mdc-typography--body" >		{faq.answer}
+                </p>
+            </div>
         {/if}
         {/each}
     </List>

@@ -55,7 +55,7 @@ ul::after {
 list-style: none;
 margin: 0;
   }
-  a, .shop {
+  a  {
     text-decoration: none;
     padding: 0.1em 0.5em;
     display: block;

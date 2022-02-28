@@ -12,7 +12,7 @@ export let showSection;
 <Card style="margin: 10px; width: 100%;">
     <PrimaryAction on:click={() => showSection = !showSection} padded>
      <div class="list-element">
-        <h3 style="font: 36px 'impact'; margin: 0;">{text}</h3>
+        <h3 style="font: 36px 'impact'; color: #fff; margin: 0;">{text}</h3>
         <Fab style="margin: 0 15px; background-color: #4F72B6; ">
             <Icon class="material-icons"> {showSection ? 'expand_less' : 'expand_more'}</Icon>
         </Fab>

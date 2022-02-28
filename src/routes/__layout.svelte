@@ -16,7 +16,7 @@ import Footer from '../layout/Footer.svelte';
     </main>
 </AppContent> 
 
-<Footer />
+<!-- <Footer /> -->
 <style>
 /* .main-content {
     overflow: auto;
