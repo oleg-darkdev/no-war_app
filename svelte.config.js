@@ -8,7 +8,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-                adapter: adapter({ out: 'prod' }),
+                adapter: adapter({ out: 'build' }),
 
 		// ## This part is necessary for SMUI!
 		vite: {
