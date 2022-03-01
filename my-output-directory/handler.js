@@ -1,0 +1,14 @@
+import 'fs';
+import 'path';
+export { h as handler } from './handler-e3d7611b.js';
+import 'url';
+import './server/app.js';
+import './manifest.js';
+import 'querystring';
+import 'node:http';
+import 'node:https';
+import 'node:zlib';
+import 'node:stream';
+import 'node:util';
+import 'node:url';
+import 'net';

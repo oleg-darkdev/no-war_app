@@ -1,5 +1,5 @@
-import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
+ import adapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,8 +8,11 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter({ out: 'prod' }),
-                // ## This part is necessary for SMUI!
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+                adapter: adapter({ out: 'my-output-directory' }),
+
+		// ## This part is necessary for SMUI!
 		vite: {
 			ssr: {
 				noExternal: [/^@material\//, /^@smui(?:-extra)?\//]
