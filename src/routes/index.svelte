@@ -100,4 +100,15 @@ import questionsList from '../data/questionsList';
 
 <style>
 
+#responsable-footer {
+	height: 500px;
+	padding-top:10px;
+
+}
+@media only screen and (min-device-width : 768px) {
+#responsable-footer {
+	height: 210px;
+	padding-top:5px;
+}
+}
 </style>
