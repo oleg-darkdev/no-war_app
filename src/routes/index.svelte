@@ -33,7 +33,7 @@ import questionsList from '../data/questionsList';
     <title>🇺🇦 #STOPWAR</title>
 </svelte:head>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
+<div class="section-body bg-img"  id="responsable-footer" style=" background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
 
 <!-- F2DD31 4F72B6 -->
 <FirstSection >
