@@ -33,12 +33,12 @@ import questionsList from '../data/questionsList';
     <title>🇺🇦 #STOPWAR</title>
 </svelte:head>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
+<div class="section-body bg-img"  id="responsable-footer" style=" background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
 
 <!-- F2DD31 4F72B6 -->
 <FirstSection >
     <Card style="max-width: 760px; ">
-      <Content style="display: flex; align-items: center; flex-direction: column;">
+      <Content style=" color:white; display: flex; align-items: center; flex-direction: column;">
 			<p> Этот сайт создан c помощью представителей МВД Украины. На нем вы найдете информацию о пленных и убитых российских солдатах в Украине, с момента начала оккупации. Здесь мы будем оперативно размещать фото и видео, которые мы получаем с поля боя.
 				Если ваши родственники или знакомые находятся в Украине и участвуют в войне против нашего народа - здесь вы сможете получить информацию об их судьбе.
 			</p>
@@ -100,4 +100,15 @@ import questionsList from '../data/questionsList';
 
 <style>
 
+#responsable-footer {
+	height: 500px;
+	padding-top:10px;
+
+}
+@media only screen and (min-device-width : 768px) {
+#responsable-footer {
+	height: 210px;
+	padding-top:5px;
+}
+}
 </style>
