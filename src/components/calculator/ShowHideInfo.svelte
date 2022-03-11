@@ -9,14 +9,19 @@ import Card, {
 import Button, { Label } from '@smui/button';
 
 export let showCalculator;
+export let warDaysFullArray;
+export let warDays;
 </script>
-
-<Card style="margin: 5px 0; width: 380px;">
-    <Content style="color: #fff;"> {showCalculator ? 'Hide data':'Show data'}</Content>
+<!--  {showCalculator ? 'Hide data':'Show data'} -->
+<Card style="margin: 5px 0; width: 100%;">
+    <Content style="color: #fff; background-color: #F2DD31;">Information on the losses of the Russian army with a chronology</Content>
     <Actions fullBleed>
-    <Button on:click={() => showCalculator = !showCalculator}>
-        <Label>Lorem impsum</Label>
-        <i class="material-icons" aria-hidden="true">arrow_forward</i>
+    <Button on:click={() => {
+        showCalculator = !showCalculator;
+        warDays = warDaysFullArray;
+    }}>
+        <Label>{!showCalculator ? 'Show chronology': 'Hide chronology'}</Label>
+        <i class="material-icons" aria-hidden="true">{!showCalculator ? 'expand_more': 'expand_less'}</i>
     </Button>
     </Actions>
 </Card>

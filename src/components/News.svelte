@@ -16,20 +16,34 @@ const popularNews = [
     {
         date: '24.02.2022',
         name: 'Lorem impsum',
-        img: '',
+        img: 'https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/news/02/anti_war_hand.png',
         instagram: '',
         shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     }, 
     {
         date: '24.02.2022',
         name: 'Lorem impsum',
-        img: '',
+        img: 'https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/news/02/pl_ua.png',
+        instagram: '',
+        shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+        {
+        date: '24.02.2022',
+        name: 'Lorem impsum',
+        img: 'https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/news/02/spiymav.png',
+        instagram: '',
+        shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+        {
+        date: '24.02.2022',
+        name: 'Lorem impsum',
+        img: 'https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/news/02/we_love_you.png',
         instagram: '',
         shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
 ];
 
-const newsArray = [
+const fullArrayNews = [
       {
          date: '24.02.2022',
          name: 'Lorem impsum',
@@ -258,14 +272,14 @@ const newsArray = [
  ];
 
 
- 
+let newsArray = fullArrayNews.slice(0, 5);
 </script>
 
 <section style="width: 100%; height: auto; ">
   <div style="background-color: #F2DD31; display: flex; justify-content: center; ">
-    <Paper color="primary" style="width: auto; margin: -30px 0 -30px 0; display: flex; justify-content: center; background-color: #1A1A1A;  max-width: 1200px;" >
-        <Content >
-        {#each newsArray.slice(0, 5) as news}
+    <Paper color="primary" style="width: auto; max-width: 1080px; margin: -30px 0 -30px 0; background-color: #1A1A1A;  max-width: 1200px;" >
+        <Content style="display: flex; justify-content: center; flex-direction: column; ">
+        {#each newsArray as news}
             <Card style="width: 1024px; min-width:400px; margin: 25px 0;">
                 <Content style=" background-image: url({news.img}); height: 315px; background-size: contain; background-repeat: no-repeat; ">
                 </Content>
@@ -277,16 +291,30 @@ const newsArray = [
                 </Actions>
             </Card>
             {#if news.showNewsThisDay}
+            <div class="top-news-wrap">
               {#each news.popularNews as topNews}
-                <Card style="width: 350px; height: 350px;">
+                <Card style="width: 350px; height: 350px; margin: 5px;">
+                  <PrimaryAction on:click={() => topNews.showDescription = !topNews.shortDescription}>
                     <Media class="card-media-square" style="background-image: url({topNews.img});" aspectRatio="square">
+                         <div style="color: #fff; position: absolute; bottom: 16px; left: 16px;">
+                          {#if topNews.showDescription }
+                            <h2 class="mdc-typography--headline6" style="margin: 0;">
+                              {topNews.name}
+                            </h2>
+                            <h3 class="mdc-typography--subtitle2" style="margin: 0;">
+                              {topNews.shortDescription}
+                            </h3>
+                          {/if}
+                        </div>
                     </Media>
+                    </PrimaryAction>
                   </Card>
                 {/each}
+            </div>
             {/if}
         {/each}
-        <Card style="width: 80%; margin: 10px 0 25px 0;">
-            <PrimaryAction style="min-height: 180px; height: auto;  background-color: #F2DD31; " on:click={() => news.showAllNews = !news.showAllNews} padded>
+        <Card style="width: 350px;  margin: 10px 0 25px 0;">
+            <PrimaryAction style="height: 100px; background-color: #F2DD31; " on:click={() => newsArray = fullArrayNews} padded>
                 <h3 style="font: 54px 'impact'; margin: 0; text-align:center;">Show all news</h3>
             </PrimaryAction>
         </Card>
@@ -296,6 +324,11 @@ const newsArray = [
 </section>
 
 <style>
-    css {
+    .top-news-wrap {
+      max-width: 1080px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 </style>

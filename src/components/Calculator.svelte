@@ -19,7 +19,7 @@ import List, {
 
   import ShowHideInfo from './calculator/ShowHideInfo.svelte';
 
- const warDays = [
+ const warDaysFullArray = [
      {
          date: '24.02.2022',
          name: 'Lorem impsum'
@@ -153,6 +153,7 @@ import List, {
  
  
 let showCalculator = false; 
+let warDays = warDaysFullArray.slice(0, 6);
 
 export let data;
 </script>
@@ -161,16 +162,15 @@ export let data;
 <section style="width: 100%; height: auto; background-color: #F2DD31; min-height: 100px; ">
     <Paper color="primary" style="min-width: 400px; width: auto; margin: -50px 0 -50px 0; display: flex; justify-content: center; background-color: #1A1A1A;" >
       <Content >
-        <ShowHideInfo bind:showCalculator />
+        <ShowHideInfo bind:warDays {warDaysFullArray}/>
    
         <div class="war-days-wrap">
-            {#if showCalculator}
-            {#each warDays as warDay}
-                <Card style="margin: 5px 0;">
+              {#each warDays as warDay}
+                <Card style="margin: 5px 0; background-color: #4F72B6;">
                 <Content style="color: #fff;">{warDay.date}</Content>
-                <Actions fullBleed>
+                <Actions fullBleed style="background-color: #1A1A1A;">
                     <Button on:click={() => warDay.show = !warDay.show}>
-                    <Label>show information for that day</Label>
+                    <Label>Information for that day</Label>
                     <i class="material-icons" aria-hidden="true">arrow_forward</i>
                     </Button>
                 </Actions>
@@ -189,8 +189,8 @@ export let data;
                     </List>
                 {/if}
             {/each}
-             <ShowHideInfo bind:showCalculator />
-            {/if}
+
+              <!-- <ShowHideInfo bind:warDays {warDaysFullArray}/> -->
             </div>
        </Content>
     </Paper>

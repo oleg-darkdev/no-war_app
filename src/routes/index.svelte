@@ -55,14 +55,8 @@ import Table from '../components/Table.svelte';
     </Card>
 </FirstSection>
 
-
-
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
-<Calculator data={occupantsData.rf.lossListRF}/>
-
-
-
 <div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);" />
+<Table />
 <InfoSection >
 	<div style="display: flex; align-items: center; flex-direction: column; flex-wrap: no-wrap; width: 100%;">
 		<FindForm color='4F72B6' />
@@ -70,16 +64,17 @@ import Table from '../components/Table.svelte';
 	</div>
 </InfoSection>
 
+<div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
+<News />
+
+
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
+<Calculator data={occupantsData.rf.lossListRF}/>
 
 <!-- <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/support_bg.png);" />
 <YellowSection >
 	<Support />
 </YellowSection>   -->
-
-<div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
-<News />
-
-
 
 
 <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
