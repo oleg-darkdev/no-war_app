@@ -77,9 +77,7 @@ import Table from '../components/Table.svelte';
 </YellowSection>   -->
 
 <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
-<YellowSection>
-	<News />
-</YellowSection>
+<News />
 
 
 
