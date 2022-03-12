@@ -272,7 +272,7 @@ const fullArrayNews = [
  ];
 
 
-let newsArray = fullArrayNews.slice(0, 5);
+let newsArray = fullArrayNews.slice(0, 2);
 </script>
 
 <section style="width: 100%; height: auto; ">
