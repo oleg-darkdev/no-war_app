@@ -16,15 +16,17 @@ import FindForm from '../components/FindForm.svelte';
 // Components
 import InfoOccupantsRF from '../components/InfoOccupants.svelte';
 import Calculator from '../components/Calculator.svelte';
+import News from '../components/News.svelte';
 import QuestionsList from '../components/faq/QuestionsList.svelte';
 import Support from '../components/Support.svelte';
 
-// Data
 
+
+// Data
 import occupantsData from '../data/occupantsData';
 import questionsList from '../data/questionsList';
 
-
+import Table from '../components/Table.svelte';
 
 </script>
 
@@ -33,12 +35,13 @@ import questionsList from '../data/questionsList';
     <title>🇺🇦 #STOPWAR</title>
 </svelte:head>
 
-<div class="section-body bg-img"  id="responsable-footer" style=" background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
+
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
 
 <!-- F2DD31 4F72B6 -->
 <FirstSection >
     <Card style="max-width: 760px; ">
-      <Content style=" color:white; display: flex; align-items: center; flex-direction: column;">
+      <Content style="display: flex; align-items: center; flex-direction: column;">
 			<p> Этот сайт создан c помощью представителей МВД Украины. На нем вы найдете информацию о пленных и убитых российских солдатах в Украине, с момента начала оккупации. Здесь мы будем оперативно размещать фото и видео, которые мы получаем с поля боя.
 				Если ваши родственники или знакомые находятся в Украине и участвуют в войне против нашего народа - здесь вы сможете получить информацию об их судьбе.
 			</p>
@@ -52,14 +55,8 @@ import questionsList from '../data/questionsList';
     </Card>
 </FirstSection>
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
-<CalculatorSection >
-	<div style="display: flex; justify-content: center; flex-direction: column; flex-wrap: no-wrap; width: 400px;">
-		<Calculator data={occupantsData.rf.lossListRF}/>
-	</div>	
-</CalculatorSection>
-
 <div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);" />
+<Table />
 <InfoSection >
 	<div style="display: flex; align-items: center; flex-direction: column; flex-wrap: no-wrap; width: 100%;">
 		<FindForm color='4F72B6' />
@@ -67,15 +64,22 @@ import questionsList from '../data/questionsList';
 	</div>
 </InfoSection>
 
+<div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
+<News />
+
+
+<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
+<Calculator data={occupantsData.rf.lossListRF}/>
 
 <!-- <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/support_bg.png);" />
 <YellowSection >
 	<Support />
 </YellowSection>   -->
 
+
 <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
 <BlueSection >
-		<QuestionsList data={questionsList}/>
+	<QuestionsList data={questionsList}/>
 </BlueSection>  
 
 
@@ -100,15 +104,4 @@ import questionsList from '../data/questionsList';
 
 <style>
 
-#responsable-footer {
-	height: 500px;
-	padding-top:10px;
-
-}
-@media only screen and (min-device-width : 768px) {
-#responsable-footer {
-	height: 210px;
-	padding-top:5px;
-}
-}
 </style>
