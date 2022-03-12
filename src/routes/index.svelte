@@ -37,9 +37,32 @@ import Table from '../components/Table.svelte';
 
 
 <div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
-<!-- F2DD31 4F72B6 -->
+<div class="navigation-wrap">
+	<Card style="width: 230px; height: 250px;  margin: -50px 0 0 0;  ">
+		<Content style="display: flex; align-items: center; flex-direction: column; color: #fff;">
+			<div class="navigation-menu">
+				<span class="mdc-typography--headline4">Навигация</span>
+			<Button href="#prisioners-list">
+			<Label>Список военных</Label>
+			</Button>
+			<Button href="#find-form">
+			<Label>Поиск людей</Label>
+			</Button>
+			<Button href="#сalculator">
+			<Label>Потери РФ </Label>
+			</Button>
+			<Button href="#faq ">
+			<Label>Вопросы / ответы</Label>
+			</Button>
+			<Button href="#contacts">
+			<Label>Контакты</Label>
+			</Button>
+		</div>
+		</Content>
+	</Card>
+</div>
 <FirstSection >
-    <Card style="max-width: 760px; ">
+    <Card slot="content" style="max-width: 760px; ">
       <Content style="display: flex; align-items: center; flex-direction: column; color: #fff;">
 			<p> Этот сайт создан c помощью представителей МВД Украины. На нем вы найдете информацию о пленных и убитых российских солдатах в Украине, с момента начала оккупации. Здесь мы будем оперативно размещать фото и видео, которые мы получаем с поля боя.
 				Если ваши родственники или знакомые находятся в Украине и участвуют в войне против нашего народа - здесь вы сможете получить информацию об их судьбе.
@@ -49,23 +72,6 @@ import Table from '../components/Table.svelte';
 				Совместная агрессия России и Беларуси против Украины вынуждает нас всех принимать решения и становиться на одну из сторон. 
 			</p>
 
-			<div class="navigation-menu">
-				<Button href="#prisioners-list">
-				<Label>Список принявших участие</Label>
-				</Button>
-				<Button href="#find-form">
-				<Label>Форма поиска людей</Label>
-				</Button>
-				<Button href="#сalculator">
-				<Label>Калькулятор потерь</Label>
-				</Button>
-				<Button href="#faq ">
-				<Label>Вопросы / ответы</Label>
-				</Button>
-				<Button href="#contacts">
-				<Label>Контакты</Label>
-				</Button>
-			</div>
 			<FindForm color='F2DD31'/>
 	  </Content>
     </Card>
@@ -109,9 +115,14 @@ import Table from '../components/Table.svelte';
 
 
 <style>
+	.navigation-wrap {
+		display: flex;
+		justify-content: center;
+	}
 	.navigation-menu {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;		
+		
 	}
 </style>
