@@ -51,7 +51,7 @@ import Table from '../components/Table.svelte';
 			<Button href="#сalculator">
 			<Label>Потери РФ </Label>
 			</Button>
-			<Button href="#faq ">
+			<Button href="#faq">
 			<Label>Вопросы / ответы</Label>
 			</Button>
 			<Button href="#contacts">
@@ -89,7 +89,7 @@ import Table from '../components/Table.svelte';
 	</div>
 </InfoSection>
 
-<div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/faq_bg.png);" />
+<div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/news_bg.png);" />
 <News />
 
 <a name="сalculator"></a>
