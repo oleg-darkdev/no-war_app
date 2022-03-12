@@ -7,10 +7,10 @@ import Paper, {Content} from '@smui/paper/dist';
 </style>
 
 <section style="width: 100%; max-height: 500px; ">
-  <div style="background-color: #F2DD31; display: flex; justify-content: center; ">
-    <Paper color="primary" style="width: 780px; margin: -50px 0 -50px 0; display: flex; justify-content: center; background-color: #fff;  max-width: 1200px;" >
+  <div style="background-color: #F2DD31; display: flex; justify-content: center ; flex-direction: row; flex-wrap: wrap;">
+    <Paper color="primary" style="width: 780px; margin: -50px 0 -50px 0; display: flex; justify-content: center;  background-color: #fff;  max-width: 1200px;" >
       <Content >
-        <slot>
+        <slot name="content">
         </slot>
       </Content>
     </Paper>
