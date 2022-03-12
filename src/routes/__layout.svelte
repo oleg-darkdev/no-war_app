@@ -6,10 +6,12 @@
   Title,
   Scrim,
 } from '@smui/drawer';  
-// import Header from '../layout/Header.svelte';
+
+import HeaderLayout  from '../layout/Header.svelte';
 import Footer from '../layout/Footer.svelte';
 </script>
 
+<HeaderLayout/>  
 <AppContent class="app-content">
     <main class="main-content">
         <slot />
