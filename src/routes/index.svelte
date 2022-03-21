@@ -36,7 +36,7 @@ import Table from '../components/Table.svelte';
 </svelte:head>
 
 
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
+<div class="section-body bg-img addaptive" style="background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/header_bg.png);" />
 <div class="navigation-wrap">
 	<Card style="width: 230px; height: 250px;  margin: -50px 0 0 0;  ">
 		<Content style="display: flex; align-items: center; flex-direction: column; color: #fff;">
@@ -79,7 +79,7 @@ import Table from '../components/Table.svelte';
 
 
 <a name="prisioners-list"></a>
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);" />
+<div class="section-body bg-img addaptive" style="background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/prisoners_bg.png);" />
 <Table />
 <InfoSection >
 	<div style="display: flex; align-items: center; flex-direction: column; flex-wrap: no-wrap; width: 100%;">
@@ -93,7 +93,7 @@ import Table from '../components/Table.svelte';
 <News />
 
 <a name="сalculator"></a>
-<div class="section-body bg-img" style="height: 500px; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
+<div class="section-body bg-img addaptive" style=" background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/calculator_bg.png);"/>
 <Calculator data={occupantsData.rf.lossListRF}/>
 
 <!-- <div class="section-body bg-img" style="height: 60vh; background-image: url(https://raw.githubusercontent.com/oleg-darkdev/no-war/master/static/img/bg/support_bg.png);" />
@@ -125,4 +125,31 @@ import Table from '../components/Table.svelte';
 		justify-content: center;		
 		
 	}
+	
+	/* Вынес все стили касаемо мобильной адаптациии сюдв чтобы глаза не мозолило!
+Потом все можно обединить
+*/
+
+
+
+@media screen and (max-width: 600px) {
+.addaptive {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+
+}
+}
+
+@media screen and (min-width: 800px) {
+.addaptive {
+height: 500px;
+}
+}
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
 </style>
